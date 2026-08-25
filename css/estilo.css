@@ -1,4 +1,4 @@
-*{
+ *{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -50,13 +50,14 @@ nav a:hover{
 
 .banner{
     height:550px;
-    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-    url("imagens/banner.jpg");
+   background: linear-gradient( to left, #d4af37 , black );
+
     background-size:cover;
     background-position:center;
     display:flex;
     align-items:center;
     padding-left:8%;
+    
 }
 
 .texto{
@@ -101,13 +102,26 @@ nav a:hover{
 
 /* Cards */
 
-.carros{
-    width:90%;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-    padding-bottom:70px;
+/* Ajuste para 3 elementos em cima e 2 embaixo centralizados */
+.carros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Espaçamento entre a linha de cima e a de baixo */
+}
+
+.carros-cima, .carros-baixo {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os cards na horizontal */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Garante que os cards tenham um tamanho fixo/ideal para essa grade */
+.carros .card {
+    width: 350px; /* Largura padrão para caber 3 perfeitamente na tela */
 }
 
 .card{
